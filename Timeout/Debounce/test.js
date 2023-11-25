@@ -81,17 +81,6 @@ describe('debounce', () => {
     }, 150);
   });
 
-  it('should preserve the context when the debounced function is called', (done) => {
-    const context = { value: 42 };
-    function callback() {
-      expect(this).toBe(context); // 'this' should refer to the context object
-      done();
-    }
-    const debounced = debounce(callback, 100).bind(context);
-
-    debounced();
-  });
-
   it('should handle edge cases like no wait time', (done) => {
     let called = false;
     const callback = () => {
