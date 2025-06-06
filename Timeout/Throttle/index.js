@@ -2,18 +2,34 @@
 
 // Describe how you would implement a throttle function that limits the frequency at which a function can be executed. Additionally, explain how you would integrate this throttle function into the event listener for the scroll event of the list. Your explanation should include:
 
-function throttle(func, limit) {
-  let isExecutable = true;
-  return (...args) => {
-    if (isExecutable) {
-      func.apply(this, args);
-      isExecutable = false;
+// function throttle(func, limit) {
+//   let isExecutable = true;
+//   return (...args) => {
+//     if (isExecutable) {
+//       func(...args);
+//       func.apply(this, args);
+//       isExecutable = false;
+//       setTimeout(() => {
+//         isExecutable = true;
+//       }, limit);
+//     }
+//   };
+// }
+
+const throttle = (func, limit) => {
+  let flag = true;
+  return function () {
+    let context = this;
+    let args = arguments;
+    if (flag) {
+      func.apply(context, args);
+      flag = false;
       setTimeout(() => {
-        isExecutable = true;
+        flag = true;
       }, limit);
     }
   };
-}
+};
 
 // Explanation:
 

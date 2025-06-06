@@ -31,7 +31,7 @@ function debounce(func, wait = 0) {
   return (...args) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => {
-      func(...args);
+      func.apply(this, args);
     }, wait);
   };
 }
