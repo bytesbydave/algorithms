@@ -86,8 +86,113 @@ Virtual DOM: lightweight in-memory representation of the actual DOM, allowing it
 
 - used to memoize expensive calculations so they are only recomputed once the dependencies have changed
 
+### What is `useReducer`?
 
+- for managing complex state logic in functional components
 
+```
+function reducer(state, action) {
+  switch(action.type) {
+    case 'increment':
+      return { count: state.count + 1 }
+    case 'decrement':
+      return { count: state.count - 1 }
+    default:
+      return count
+  }
+}
 
+function Counter() {
+  const [state, dispatch] = useReducer(reducer, initialState)
 
-What is a HOC
+  <button onClick={() => dispatch({type: 'increment'})}>
+}
+```
+
+### What is `useId`?
+
+- used to generate unique IDs for elements within a componet
+- useful for linking form inputs with their labels - useful for accessibility purposes
+
+```
+const id = useId()
+<label htmlFor={id}>
+<input id={id} />
+```
+
+### What are react fragments?
+
+- Groups elements without adding extra nodes to the DOM - performance and maintaining cleaner DOM structure
+  `<>...</>`
+
+### What is `forwardRef()`?
+
+- it is a higher-order function that allows you to forward a ref through a component to one of its child components
+
+### What are Error Boundaries?
+
+- catch JS errors anywhere in the child component tree and display a fallback UI instead of crashing the entire app
+- do not catch errors inside event handlers or in asynchronouss code(setTimeout or in server side rendering)
+
+### What is a HOC?
+
+- functions in React that take a component as an argument and returns a new componet with additional props and behavior
+
+### What is the FLUX pattern?
+
+- design used for managing state in applications
+- Dispatcher: Manages actions and dispatches them to stores
+- Stores: Hold state and logic of the app
+- Actions: Payloads of information sent from the application to dispatcher
+- View: Components that re-render when the stores update
+
+- benefits: predictable state management, clear separation of concern
+
+### Explain one-way data flow of React
+
+- data in a React app flows in a single direction, from parent to child. Data is predictable and easier to maintain
+
+### Presentational vs Container Component pattern
+
+- design approach where presentation components focus on how things look, container components focus on how things work
+
+### Composition pattern
+
+- a way to build components by passing smaller components as children or props(`<div className="dialog">{props.children}</div>`) instead of inheritance(`class IconButton extends Button`)
+
+### What is React Suspense?
+
+- allows you to show fallback content while waiting for something to load such as data fetching or code splitting
+
+### What happens when `setState` is called?
+
+- schedules an update to the component's state object. React mergest the enw state with the current state and triggfers a re-render of the component. React batches multiple setState calls for performance optimization
+
+### What does re-rendering mean in React?
+
+- component updates its output to the DOM in response to changes in state or props. The component's re-render method produces a new virtual DOM which is compared to the previus virtual DOM to determine the changes needed to update the actual DOM
+
+### React recomments against mutating state
+
+- React relies on state immutability to efficiently determine when to re-render components. When state is mutated directly, React may not detect the changes
+
+### What is React hydration?
+
+- when server-side HTML is sent to the client, React takes the static HTML and hydrates it by attaching event listeners and initializing state, making the page interactive
+
+### What are React Portals?
+
+- used to render children into a DOM node that exists outside of the hierarchy of the parent component. Useful for modals and tooltips
+
+### What is the Virtual DOM?
+
+- lightweight copy of the actual DOM - allows React to update the UI by comparing the virtual DOM and the real DOM making necessary changes
+
+### What is reconciliation in React?
+
+- React updates the DOM to match the virtual DOM. When a component's state or props change, React creates a new virtual DOM and compares it to the previous one.
+
+### What is React Fiber?
+
+- improves renderring process by breaking down rendering work into smaller units
+- rewrite of React's reconciliation algorithm, which compares the two virtual DOMs
