@@ -138,6 +138,15 @@ const id = useId()
 
 - functions in React that take a component as an argument and returns a new componet with additional props and behavior
 
+```
+function withLogger(WrappedComponent) {
+  return function(props) {
+    console.log('Rendering', WrappedComponent.name);
+    return <WrappedComponent {...props} />;
+  }
+}
+```
+
 ### What is the FLUX pattern?
 
 - design used for managing state in applications
@@ -196,3 +205,87 @@ const id = useId()
 
 - improves renderring process by breaking down rendering work into smaller units
 - rewrite of React's reconciliation algorithm, which compares the two virtual DOMs
+
+### Phases of the React Lifecycle
+
+- Mounting - component is inserted into the DOM
+- Updating - component is re-rendered due to changes in props/state
+- Unmounting - component is removed from the DOM, cleanup functions
+
+#### Class Components
+
+> **Mounting** - component is inserted into the DOM
+>
+> > constructor - initialize state and bind methods
+>
+> > componentDidMount - data fetching, subscriptions
+
+> **Updating** - component re-rendered due to changes in props or state
+>
+> > shouldComponentUpdate - decide whether to re-render
+>
+> > componentDidUpdate - runs after updates, good for network requests based on prop/state changes
+
+> **Unmounting** - component is being removed from the DOM
+>
+> > componentWillUnmount - cleanup(timers, subscriptions)
+
+#### Function Components(with Hooks)
+
+**useEffect(() => {...}, []):** Runs after every mount (like componentDidMount)
+
+**useEffect(() => {...}):** Runs after every render (like componentDidUpdate)
+
+**useEffect(() => {...; return () => {...}}, []):** Cleanup function runs on unmount (like componentWillUnmount)
+
+### Common Frontend Vulnerabilities
+
+**Cross-Site Scripting(XSS)**
+
+- attacker injects malicious scripts into your app
+
+- Prevention: Never inject raw HTML, sanitize user input
+
+**Clickjacking**
+
+- Malicious site tricks users into clicking something different from what they perceive
+- Prevention: Use X-Frame-Options header to prevent your app from being embedded in iframes
+
+**CSRF (Cross-Site Request Forgery)**
+
+- attacker tricks a user into submitting requests they did not intgend
+
+- Prevention: Use CSRF tokens, same-site cookies
+
+**React-Specific Security Practices**
+
+- validate and sanitize all user inputs
+
+- use HTTPS for all network requests
+
+### What is CSRF, how is it done?
+
+- Attacker crafts a request that performs a sensitive action on a target site
+- victim, while logged in to the target site, visits the malicious site
+- browser automatically includes authentication credentials(cookies) with forged request, making it seem legitimate
+
+### How to prevent CSRF?
+
+- use CSRF tokens: uinque, unpredictable values included in forms and verified by the server on submission
+- check HTTP referrer header
+- require re-authenitcation for sensitive actions
+
+### How to validate and sanittize user inputs?
+
+- input sanitization removes or encodes potentially dangerous characters to prevent attacks like SQL injection and XSS
+- identify all user input points
+- validate input types, lengths, allowed characters
+- sanitize input by escaping or removing dangerous characters (encodeURIComponent)
+
+### What does HTTPS do vs HTTP?
+
+- encrypts the data between the browser and server
+
+### What is a DOM?
+
+- represents the page structure as a tree of objects(nodes)
