@@ -49,7 +49,7 @@ interface Calculator {
 }
 ```
 
-**Classes:** Object oriented programming with TYpescript
+**Classes:** Object oriented programming with Typescript
 
 - like classes in React with constructor
 

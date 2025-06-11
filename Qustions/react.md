@@ -2,7 +2,7 @@
 
 ### What is the difference between state and props?
 
-- state is a local data storage that is managed within a component and can change over time. state is used for data tha changes within a component.
+- state is a local data storage that is managed within a component and can change over time. state is used for data that changes within a component.
 - props are read-only attributes passed from a parent component to a child component. props are used to pass data and event handlers to child components
 
 ### Describe the benefits of React
@@ -33,7 +33,7 @@ Virtual DOM: lightweight in-memory representation of the actual DOM, allowing it
 
 - used to uniquely identify elements in a list. React can quicky determine which items need to be re-rendered, added, or removed
 
-### What are the consequences of using indices as teh value for `key`?
+### What are the consequences of using indices as the value for `key`?
 
 - When the order of items changes, React may not correctly identify which items have changed, leading to unnecessary re-renders or incorrect component updates
 
@@ -44,7 +44,7 @@ Virtual DOM: lightweight in-memory representation of the actual DOM, allowing it
 
 ### Pitfalls when using context in React
 
-- performance issues if not managed properly. Can cause unnecessary re-renders of componets that consume the context. Better to use it sparingly. Use Redux or Zustand for more complex state needs
+- performance issues if not managed properly. Can cause unnecessary re-renders of components that consume the context. Better to use it sparingly. Use Redux or Zustand for more complex state needs
 
 ### What are React hooks
 
@@ -175,7 +175,7 @@ function withLogger(WrappedComponent) {
 
 ### What happens when `setState` is called?
 
-- schedules an update to the component's state object. React mergest the enw state with the current state and triggfers a re-render of the component. React batches multiple setState calls for performance optimization
+- schedules an update to the component's state object. React mergest the new state with the current state and triggers a re-render of the component. React batches multiple setState calls for performance optimization
 
 ### What does re-rendering mean in React?
 
@@ -275,7 +275,7 @@ function withLogger(WrappedComponent) {
 - check HTTP referrer header
 - require re-authenitcation for sensitive actions
 
-### How to validate and sanittize user inputs?
+### How to validate and sanitize user inputs?
 
 - input sanitization removes or encodes potentially dangerous characters to prevent attacks like SQL injection and XSS
 - identify all user input points

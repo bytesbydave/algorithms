@@ -4,7 +4,7 @@
 
 ### Semantic Markup
 
-- Use semantic HTML5 elements (`, `, `, `, `, `) for meaningful structure and accessibility.
+- Use semantic HTML5 elements (`<h1>`, `<header>`, `<p>`, `<footer>`) for meaningful structure and accessibility.
 - Prefer relative font units (`em`, `rem`, `%`) for better scalability.
 - Ensure proper heading hierarchy and use ARIA labels where necessary.
 
@@ -13,6 +13,7 @@
 - Use CSS3 media queries to adapt layouts for different devices.
 - Set breakpoints based on content needs, not just device sizes. Use `min-width` or `max-width` as appropriate.
 - **Example:**
+
 ```
 
 @media screen and (max-width: 600px) {
@@ -22,6 +23,7 @@ font-size: 1.1em;
 }
 
 ```
+
 - Mobile-first: Start with the smallest screen and enhance for larger devices.
 
 ### Accessibility Best Practices
@@ -34,9 +36,11 @@ font-size: 1.1em;
 ### Images
 
 - Use responsive images:
+
 ```
 
 ```
+
 - Choose formats (JPEG, WebP, SVG) based on use case and accessibility.
 
 ---
@@ -58,12 +62,15 @@ font-size: 1.1em;
 
 ---
 
-## Using Front-End Frameworks (React/Vue) – Example
+## Describe a project where you used React? What were some of the challenges you faced and how did you overcome it?
 
-- **Challenges:**
+**Challenges:**
+
 - Large shared components, multiple engineers, merge conflicts.
 - Risk of inconsistent component behavior.
-- **Solutions:**
+
+**Solutions:**
+
 - Break components into small, pure, reusable functions.
 - Prioritize critical issues.
 - Clear ownership and communication.
@@ -79,7 +86,7 @@ font-size: 1.1em;
 
 ---
 
-## Managing Dependencies & Optimizing Build Performance
+## What is your approach to Managing Dependencies & Optimizing Build Performance
 
 - Use npm/Yarn for dependency management.
 - Store packages in a private registry (e.g., Artifactory).
@@ -105,17 +112,19 @@ font-size: 1.1em;
 
 ---
 
-## Refactoring Legacy Codebases
+## Describe a time you had to Refactor a Legacy Codebase. What was your strategy?
 
-- **Why:** Modernize, improve maintainability, address technical debt.
+- **Why:** Modernize, improve maintainability, address technical debt, keep it alive?
+- What sort of refactor? like changing class to components?
 - **How:** Remove unused code, convert class to functional components, eliminate duplication, update dependencies.
 
 ---
 
 ## WordPress in Headless/Integrated Architectures
 
-- Use WordPress/CMS as APIs (REST/GraphQL).
-- Integrate with front-end frameworks for dynamic content.
+- Used CMS as APIs (REST/GraphQL).
+- Used Sitecore as an API at Comcast
+- Kibo as an integrated architecture - pivoting to headless architecture
 
 ---
 
@@ -135,10 +144,11 @@ font-size: 1.1em;
 
 ---
 
-## Diagnosing and Resolving Performance Drops
+## You notice a significant drop in performance on a key landing page. Walk us through how you would identify and resolve the issue. Diagnosing and Resolving Performance Drops. What tools or metrics will you use?
 
 - Use monitoring tools (Kibana, logs) to identify spikes in errors or load times.
-- Collaborate with other teams to rule out network/back-end issues.
+- Collaborate with other teams to rule out network/back-end issues
+- Check logs to see any recent changes
 - Validate fixes with metrics, profiling tools, and user feedback.
 
 ---
@@ -164,4 +174,3 @@ font-size: 1.1em;
 
 - Consider user base, feature development, performance, error rates, business needs.
 - Weigh value and risk of refactoring vs. rewriting or maintaining.
-
