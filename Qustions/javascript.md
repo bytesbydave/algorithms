@@ -85,8 +85,8 @@ HTML parsing is complete
 
 ### What is Feature Detection and Feature Inference?
 
-- Determining whether a browsesr supports a certain block of code and running a diffent code depending on whether it does or doesn't
-- The differences are the functgion it uses to determine
+- Determining whether a browser supports a certain block of code and running a diffent code depending on whether it does or doesn't
+- The differences are the function it uses to determine
 
 ### What is `Function.prototype.bind`?
 
