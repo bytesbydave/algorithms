@@ -14,7 +14,11 @@
 
 ### What is the difference between a `Map` object and a plain object?
 
+- Map has built in `size`, `get`, `set`, `delete` methods
+- Map is directly iterable with for...of
+- keys can be any types
 - map object is iterable array of arrays where the individual array(array[0], array[1]) are key-value pairs
+- Map is used for more complex or dynamic scenarios
 
 ```
 Plain object
@@ -132,7 +136,7 @@ console.log(obj.getValue()); // undefined
 
 ### What is the difference between `function Person(){}`, `const person = Person()`, and `const person = new Person()`
 
-- `function Person(){}` is a function declaration. It can b e used as a regular function or as a constrctor
+- `function Person(){}` is a function declaration. It can be used as a regular function or as a constrctor
 - `const person = Person()` calls Person as a regular function
 - `const person = new Person()` creates a new instance of Person
 
@@ -198,7 +202,7 @@ console.log('Call made to fetch data'); // This will print before the data is fe
 
 ### What is a promise?
 
-- a Promise is an object represeenting the eventual result of an asynchronous operation
+- a Promise is an object representing the eventual result of an asynchronous operation
 - three states: Pending, fulfilled, rejected
 
 ### Pros and cons of using Promises instead of callbacks in Javascript?
