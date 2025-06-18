@@ -400,8 +400,8 @@ const immutableObject = Object.freeze({
 **Set** - you need to store a collection of unique values and you don't care about the order or associating values with keys
 
 - You want to quickly check if a value exists in the collection or to remove duplicates from an array
-
-- Set is a collection of unique values - no indexing
+- Set is a collection of unique values 
+- no indexing
 - WeakSet is a collection of unique objects
 
 ### What are `Symbol`s used for?
