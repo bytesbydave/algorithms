@@ -180,7 +180,7 @@ var foo = function() {
 
 ### Differences between synchronous and asynchronous functions in Javascript?
 
-- Synchronous functions are blocking while Asynchrnous functions are not
+- Synchronous functions are blocking while Asynchronous functions are not
 
 ```
 function fetchData(callback) {
@@ -483,7 +483,7 @@ console.log(descriptor); // {value: "John Doe", writable: true, enumerable: true
 
 ### How does garbage collection work?
 
-- automatic memory management mechanism that reclaims memory opccupied by objects and variables that are no longer in use by the program
+- automatic memory management mechanism that reclaims memory occupied by objects and variables that are no longer in use by the program
 
 ### How to make a single page app SEO friendly
 

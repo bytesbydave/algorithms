@@ -58,7 +58,7 @@ interface Calculator {
 - "type variables" placeholders that get specified when you use a function, class or interface
 
 ```
-function identityh<T>(value: T): T {
+function identity<T>(value: T): T {
   return value
 }
 
