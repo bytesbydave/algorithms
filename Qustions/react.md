@@ -132,7 +132,7 @@ const id = useId()
 ### What are Error Boundaries?
 
 - catch JS errors anywhere in the child component tree and display a fallback UI instead of crashing the entire app
-- do not catch errors inside event handlers or in asynchronouss code(setTimeout or in server side rendering)
+- do not catch errors inside event handlers or in asynchronous code(setTimeout or in server side rendering)
 
 ### What is a HOC?
 
@@ -253,7 +253,7 @@ function withLogger(WrappedComponent) {
 
 **CSRF (Cross-Site Request Forgery)**
 
-- attacker tricks a user into submitting requests they did not intgend
+- attacker tricks a user into submitting requests they did not intend
 
 - Prevention: Use CSRF tokens, same-site cookies
 
@@ -289,3 +289,14 @@ function withLogger(WrappedComponent) {
 ### What is a DOM?
 
 - represents the page structure as a tree of objects(nodes)
+
+### The 3 main Rules of Hooks:
+
+Only call hooks at the top level
+— Don’t call hooks inside loops, conditions, or nested functions. Hooks must run in the same order every render.
+
+Only call hooks from React function components or custom hooks
+— Don’t call hooks from regular JS functions, class components, or outside React.
+
+Always specify dependency arrays correctly (for hooks like useEffect, useCallback, useMemo)
+— Missing or incorrect dependencies can cause bugs like stale closures or infinite loops.

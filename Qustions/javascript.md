@@ -488,4 +488,8 @@ console.log(descriptor); // {value: "John Doe", writable: true, enumerable: true
 ### How to make a single page app SEO friendly
 
 - can use server side rendering to ensure search engines can index your website
-- SSR involves renderiung the initial HTML of the page on the server before sending it to the client
+- SSR involves rendering the initial HTML of the page on the server before sending it to the client
+
+### Explain Object Oriented Programming
+
+### Explain Functional Programming
