@@ -14,27 +14,16 @@
 // func.apply(thisArg, args)
 // func.call(thisArg, ...args)
 
-function debounce(func, wait = 0) {
-  // let timeoutID = null;
-  // return function (...args) {
-  //   // Keep a reference to `this` so that
-  //   // func.apply() can access it.
-  //   const context = this;
-  //   clearTimeout(timeoutID);
-
-  //   timeoutID = setTimeout(function () {
-  //     timeoutID = null; // Not strictly necessary but good to do this.
-  //     func.apply(context, args);
-  //   }, wait);
-  // };
+const debounce = (func, wait) => {
   let timeout;
-  return (...args) => {
+  return function (...args) {
+    const context = this;
     clearTimeout(timeout);
     timeout = setTimeout(() => {
-      func.apply(this, args);
+      func.apply(context, args);
     }, wait);
   };
-}
+};
 
 module.exports = {
   debounce,

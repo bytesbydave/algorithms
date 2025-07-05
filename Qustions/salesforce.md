@@ -147,6 +147,7 @@ font-size: 1.1em;
 ## You notice a significant drop in performance on a key landing page. Walk us through how you would identify and resolve the issue. Diagnosing and Resolving Performance Drops. What tools or metrics will you use?
 
 - Use monitoring tools (Kibana, logs) to identify spikes in errors or load times.
+- Confirm tracking codes are intact and filters
 - Collaborate with other teams to rule out network/back-end issues
 - Check logs to see any recent changes
 - Validate fixes with metrics, profiling tools, and user feedback.
@@ -170,7 +171,28 @@ font-size: 1.1em;
 
 ---
 
-## Evaluating Legacy Frameworks: Refactor, Rewrite, or Leave As-Is
+### Evaluating Legacy Frameworks: Refactor, Rewrite, or Leave As-Is
 
 - Consider user base, feature development, performance, error rates, business needs.
 - Weigh value and risk of refactoring vs. rewriting or maintaining.
+
+### How would you implement CI/CD?
+
+1. Set up version control
+- Establish branching strategies (feature branches, main/master) to organize development and code reviews
+
+2. Automate Build Process
+- configue a build automation tool (Jenkins, GitLab, Github Actions) to automatically compile and package code when changes are made to the repository
+
+3. Integrate Automated Testing
+- Integrate tests into CI pipeline, so they run after each build
+
+4. Continuous Integration
+- Set up to trigger builds and tests automatically on code commits
+
+5. Continuous Delivery/Deployment
+- Automate deployment process to staging and production environments using tools like Docker, Kubernetes
+- ensure the application is always in a deployable state, but require a manual trigger for Prod
+
+6. Monitor and Secure pipeline
+- implement monitoring and logging to track deployments and system health

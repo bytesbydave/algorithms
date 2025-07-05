@@ -18,9 +18,8 @@
 
 const throttle = (func, limit) => {
   let flag = true;
-  return function () {
+  return function (...args) {
     let context = this;
-    let args = arguments;
     if (flag) {
       func.apply(context, args);
       flag = false;

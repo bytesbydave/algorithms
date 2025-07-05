@@ -300,3 +300,7 @@ Only call hooks from React function components or custom hooks
 
 Always specify dependency arrays correctly (for hooks like useEffect, useCallback, useMemo)
 — Missing or incorrect dependencies can cause bugs like stale closures or infinite loops.
+
+### SSR vs CSR
+
+### What gets returned for SSR
